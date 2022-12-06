@@ -1,0 +1,20 @@
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-image: url('https://media.istockphoto.com/id/1370265922/vector/pharmacy-online-shop-concept-for-ui-web-homepage-hand-of-pharmacist-give-bag-with.jpg?s=612x612&w=0&k=20&c=TBgEYn39Nv1bRPUrWR68ReJ1o0nHNw2XimHLj0CM4Dk=');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  
