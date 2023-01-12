@@ -8,6 +8,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import "../styling/Home.css";
 import { CiSearch } from "react-icons/ci";
 import logo from '../Imgs/logo.jpeg'
+import profile from '../Imgs/profile.png'
+
 function NavbarBet() {
     
     return (
@@ -19,6 +21,7 @@ function NavbarBet() {
                     <Navbar.Offcanvas>
 
                         <Offcanvas.Body>
+                        <img src={profile} alt='' className='img-profile img-nav'/>
                             <Form className="d-flex">
                                 <label className='search-label'>أبحث:</label>
                                 <InputGroup >
@@ -40,10 +43,7 @@ function NavbarBet() {
                                 id='navbar-nav-link-id'>موردين</Nav.Link>
                                 <Nav.Link href="#action1" className='navbar-nav-link'
                                 id='navbar-nav-link-id'>تجار</Nav.Link>
-                                <Nav.Link href="#action1" className='navbar-nav-link'
-                                id='navbar-nav-link-id'>أرباح يوميه</Nav.Link>
-                                <Nav.Link href="#action1" className='navbar-nav-link'
-                                id='navbar-nav-link-id'>أرباح شهريه</Nav.Link>
+                                
                             </Nav>
 
 

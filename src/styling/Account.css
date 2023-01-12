@@ -1,0 +1,146 @@
+li {
+  margin-right: 10%;
+  font-size: 25px;
+  display: inline;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 10px;
+
+}
+.signin-up-active a {
+  padding-bottom: 10px;
+  color: #CF5814;
+  text-decoration: none;
+  border-bottom: solid 2px #CF5814;
+  transition: all .25s ease;
+  cursor: pointer;
+
+}
+.signin-up-active a:hover{
+  color:#CF5814;
+}
+.signin-up-inactive a:hover{
+  color:#bebebe;
+}
+.signin-up-inactive a {
+  padding-bottom: 0;
+  color: #bebebe;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+  transition: all .25s ease;
+
+}
+
+.image-active {
+  width: 100%;
+  opacity: 1;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.login-img {
+  width: 99%;
+  max-height: 95%;
+}
+
+.image-inactive {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.form-active {
+  margin-top: 8%;
+  width: 100%;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.form-inactive {
+  width: 100%;
+  opacity: 0;
+  color: #CF5814;
+  display: none;
+  transition: all 1s ease;
+}
+
+/**************************login*************************************/
+.Card-login {
+  background-color: #f8f8f8 !important;
+}
+
+.Login-Title {
+  color: #CF5814 !important;
+  display: inline-flex;
+  margin-left: 4%;
+  margin-bottom: 12%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Login-Title-noneActive {
+  color: #e1dedc;
+  display: inline;
+  margin-left: 5%;
+  margin-bottom: 12%;
+  cursor: pointer;
+}
+
+.login-Form {
+  margin-top: 0%;
+}
+
+.login-Form input {
+  border-radius: 20px;
+  width: 80%;
+  min-height: 3rem;
+  border-style: none;
+  background-color: rgb(240, 242, 240);
+  margin-bottom: 2%;
+}
+
+.login-Form button {
+  background-color: #CF5814;
+  border-radius: 15px;
+  width: 35%;
+  color: white;
+  border-style: none;
+  min-height: 3rem;
+  margin-right: 70%;
+  font-size: large;
+}
+
+.showPass {
+  display: inline;
+  margin-right: 2%;
+}
+/*****************************Signup*********************/
+.SignUp-Form {
+  margin-top: 4%;
+}
+
+.SignUp-Form input {
+  border-radius: 20px;
+
+  min-height: 3rem;
+  border-style: none;
+  background-color: rgb(240, 242, 240);
+}
+
+.SignUp-Form .BirthDate-Input {
+  width: 100%;
+  padding-left: 5%;
+  margin-left: 0%;
+}
+.SignUp-Form button {
+  background-color: #CF5814;
+  border-radius: 15px;
+  width: 35%;
+  color: white;
+  border-style: none;
+  min-height: 3rem;
+  margin-right: 70%;
+  font-size: large;
+}

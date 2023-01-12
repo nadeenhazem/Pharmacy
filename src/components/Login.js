@@ -1,9 +1,8 @@
 import React from 'react';
-import '../styling/login.css'
+import '../styling/Account.css'
 import { useState } from 'react';
 import axios from 'axios';
 import { BsEyeSlash, BsEye } from "react-icons/bs";
-import { Link } from 'react-router-dom';
 
 function Login() {
   const [loginUser, setLoginUser] = useState({
@@ -73,38 +72,11 @@ function Login() {
   const togglePassword = () => {
     setIsSHown((isShown) => !isShown);
   };
-  const [displayForm, setDisplayForm] = useState('signup')
-  const LoginPages = () => {
-    setDisplayForm((displayForm) => displayForm = 'login')
-  }
-
-  const signupPages = () => {
-    setDisplayForm((displayForm) => displayForm = 'signup')
-  }
+ 
+  
 
   return (
     <>
-
-      <section style={{ maxHeight: 'auto' }}>
-        <div className="container py-5 h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col col-xl-10">
-              <div className="card Card-login" style={{ borderRadius: "1rem" }}>
-                <div className="row g-0">
-                  <div className="col-md-6 col-lg-6 d-flex align-items-center" style={{ direction: 'rtl' }}>
-                    <div className="card-body p-4 p-lg-5 ">
-
-                      
-                      <h3 style={{ display: 'inline' }}>
-                        <Link to='/login' className='Login-Title'>تسجيل الدخول
-                        </Link>
-                      </h3>
-
-                      <h3 style={{ display: 'inline' }}>
-                        <Link to='/signup' className='Login-Title'>
-                          انشاء حساب </Link>  
-                      </h3>
-
                       <form className='login-Form'>
                 <div className="row">
 
@@ -158,29 +130,6 @@ function Login() {
                 </div>
 
             </form>
-
-                    </div>
-                  </div>
-
-                  <div
-                    className="col-md-6 col-lg-6 d-none d-md-block" style={{ position: 'relative' }} >
-                    <img src="https://i.ibb.co/jG0744Z/loginback.png"
-                      alt=".." className= 'img-fluid '  />
-                    
-                  </div>
-
-
-
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
     </>
   );
 

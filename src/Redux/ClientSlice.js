@@ -1,11 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-// to get all data in api 
-// const NameOfPage='نادين حازم'
+
 export const fetchClient=createAsyncThunk(
     'client/fetchClient',
     async()=>{
-        const response= await axios.get( 'https://hamdyadam.pythonanywhere.com/client/');
+        const response= await axios.get( 'https://jsonplaceholder.typicode.com/todos');
         return response.data
         
     }

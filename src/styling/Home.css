@@ -25,7 +25,7 @@ background-color: rgb(237, 238, 239);
     padding-right: 5%;
   }
   .navbar-nav-link{
-    margin-right:50px ;
+    margin-right:80px ;
     font-size: large;
     color:#CF5814;
     padding-right:  60px;
@@ -114,6 +114,9 @@ margin-top:70px;
 .img-profile{
   width:40px;
   height: 40px;
+}
+.img-nav{
+  margin-right: 2%;
 }
 .table-header{
   color: #CF5814;

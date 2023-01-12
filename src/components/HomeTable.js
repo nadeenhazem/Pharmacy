@@ -2,9 +2,6 @@ import React from 'react';
 import {  Table } from 'react-bootstrap';
 import profile from '../Imgs/profile.png'
 function HomeTable(props) {
-    //  props.Data.map((customer)=>{
-        //  console.log(props.Data)
-    //  })
     return (
         <div>
         <h4 className='Header-title'>{props.name}</h4>
@@ -45,23 +42,6 @@ function HomeTable(props) {
                                         }
                                    
 
-
-{/* 
-                                        {
-                                            props.Data.map((customer)=>
-                                            <td>{customer.userId}</td>)
-                                        }
-                                         */}
-                                    
-                                    {/* <tr>
-                                    <td><img src={profile} alt='' className='img-profile'/></td>
-                                         
-                                        {/* {
-                                            props.Data.map((customer)=>
-                                            <td>{customer}</td>)
-                                        } */}
-                                        
-                                   {/* </tr> */}
                                 </tbody>
                             </Table>  
         </div>
