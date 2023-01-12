@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styling/signup.css';
-import CheckenBg from '../Imgs/chBg.jpg'
 import axios from 'axios'
-
+import '../styling/login.css'
+// import { BsEyeSlash,BsEye } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
 
 function Signup() {
 
@@ -17,7 +19,7 @@ function Signup() {
         password: '',
         confirm: '',
         gender: '',
-        dob:'',
+        dob: '',
     })
 
     const [errors, setErrors] = useState({
@@ -30,7 +32,7 @@ function Signup() {
         passwordErr: null,
         confirmErr: null,
         genderErr: null,
-        dobErr:null,
+        dobErr: null,
 
     })
     const changeData = (e) => {
@@ -114,8 +116,8 @@ function Signup() {
             setErrors({
                 ...errors,
                 dobErr:
-                e.target.value.length === 0 ?
-                "يجب ادخال تاريخ الميلاد " :
+                    e.target.value.length === 0 ?
+                        "يجب ادخال تاريخ الميلاد " :
                         null
 
             })
@@ -172,52 +174,273 @@ function Signup() {
 
 
     }
-    const handleChange =(e)=>{
+    const handleChange = (e) => {
         e.preventDefault();
         axios
-        .post("https://katkout.herokuapp.com/signup/",{
-            username: userData.username,
-            display_name: userData.display_name,
-            email: userData.email,
-            phone: userData.phone,
-            ID: userData.ID,
-            password: userData.password,
-            confirm: userData.confirm,
-            gender: userData.gender,
-            dob:userData.dob,
-        })
-        .then((res)=>{
-        console.log(res)
-        console.log(res.data)
+            .post("https://hamdyadam.pythonanywhere.com/signup/", {
+                username: userData.username,
+                display_name: userData.display_name,
+                email: userData.email,
+                phone: userData.phone,
+                ID: userData.ID,
+                password: userData.password,
+                confirm: userData.confirm,
+                gender: userData.gender,
+                dob: userData.dob,
+            })
+            .then((res) => {
+                console.log(res)
+                console.log(res.data)
 
-        
-        console.log(userData)
-        window.location.href =`/login`
-        })
-        .catch((err)=>{
-            console.log(err);
-            if (err.response.data.email) {
 
-                setErrors({
-                    ...errors,
-                    emailErr:
-                        "هذا البريد الالكتروني موجود"
-                })
+                console.log(userData)
+                window.location.href = `/login`
+            })
+            .catch((err) => {
+                console.log(err);
+                if (err.response.data.email) {
 
-                console.log(errors)}
-            if(err.response.data.username){
-                setErrors({
-                    ...errors,
-                    usernameErr:
-                        "هذا الاسم مستخدم من قبل"
-                }) 
-            }
-        })
+                    setErrors({
+                        ...errors,
+                        emailErr:
+                            "هذا البريد الالكتروني موجود"
+                    })
+
+                    console.log(errors)
+                }
+                if (err.response.data.username) {
+                    setErrors({
+                        ...errors,
+                        usernameErr:
+                            "هذا الاسم مستخدم من قبل"
+                    })
+                }
+            })
     }
     return (
 
         <>
-            <section className="vh-150 bg-image"
+            <section style={{ maxHeight: 'auto' }}>
+                <div className="container py-5 h-100">
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col col-xl-10">
+                            <div className="card Card-login" style={{ borderRadius: "1rem" }}>
+                                <div className="row g-0">
+                                    <div className="col-md-6 col-lg-6 d-flex align-items-center" style={{ direction: 'rtl' }}>
+                                        <div className="card-body p-4 p-lg-5 ">
+                                            <h3 style={{ display: 'inline' }}>
+                                                <Link to='/login' className='Login-Title' >تسجيل الدخول
+                                                </Link>
+                                            </h3 >
+
+                                            <h3 style={{ display: 'inline' }}>
+                                                <Link to='/signup' className='Login-Title'>
+                                                    انشاء حساب </Link>  </h3>
+
+
+                                            <form className='SignUp-Form' style={{ marginLeft: '5%' }}>
+
+                                                <div className="row">
+                                                    <div className="col-md-6 mb-4">
+
+                                                        <div className="form-outline">
+                                                            <input type="text"
+                                                                className=
+                                                                {`form-control ${errors.usernameErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="  الاسم الكامل"
+                                                                value={userData.username}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="username"
+                                                            />
+                                                            <p className="text-danger"> {errors.usernameErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div className="col-md-6 mb-4">
+
+                                                        <div className="form-outline">
+                                                            <input type="text"
+                                                                className=
+                                                                {`form-control ${errors.display_nameErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="  الاسم المستخدم"
+                                                                value={userData.display_name}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="display_name"
+                                                            />
+                                                            <p className="text-danger"> {errors.display_nameErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="row">
+
+                                                    <div className="col-md-12 mb-4">
+
+                                                        <div className="form-outline">
+                                                            <input type="text"
+                                                                className=
+                                                                {`form-control ${errors.emailErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="  البريد الالكتروني"
+                                                                value={userData.email}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="email"
+                                                            />
+                                                            <p className="text-danger"> {errors.emailErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="row">
+                                                    <div className="col-md-6 mb-4 pb-2">
+
+                                                        <div className="form-outline">
+                                                            <input type="text"
+                                                                className=
+                                                                {`form-control ${errors.phoneErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="  رقم الهاتف"
+                                                                value={userData.phone}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="phone"
+                                                            />
+                                                            <p className="text-danger"> {errors.phoneErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div className="col-md-6 mb-4 pb-2">
+
+                                                        <div className="form-outline">
+                                                            <input type="text"
+                                                                className=
+                                                                {`form-control ${errors.IDErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="  الرقم القومي"
+                                                                value={userData.ID}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="ID"
+                                                            />
+                                                            <p className="text-danger"> {errors.IDErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div className="row">
+                                                    <div className="col">
+
+                                                        <div className="form-outline mb-4">
+                                                            <input type="File" id="form3Example3cg" className="form-control form-control-lg" />
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div className="row">
+                                                    <div className="col-md-6 mb-4 pb-2">
+
+                                                        <div className="form-outline">
+                                                            <input type="password"
+                                                                className=
+                                                                {`form-control ${errors.passwordErr ? "border-danger" : "border-success"}`}
+                                                                placeholder=" الرقم السري"
+                                                                value={userData.password}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="password"
+                                                            />
+                                                            <p className="text-danger"> {errors.passwordErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div className="col-md-6 mb-4 pb-2">
+
+                                                        <div >
+                                                            <input type="password"
+                                                                className=
+                                                                {`form-control ${errors.confirmErr ? "border-danger" : "border-success"}`}
+                                                                placeholder="قم بتأكيد الرقم السري"
+                                                                value={userData.confirm}
+                                                                onChange={(e) => changeData(e)}
+                                                                name="confirm"
+                                                            />
+                                                            <p className="text-danger"> {errors.confirmErr} </p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div className="row" style={{ direction: 'rtl' }}>
+                                                    <div className="col-md-3 mb-4 pb-2">
+                                                        <div className="form-outline">
+                                                            {/* <select name="gender"
+                value={userData.gender}
+                onChange={(e) => changeData(e)}
+                className=""> */}
+                                                            <Form.Select name="gender"
+                                                                style={{ backgroundColor: 'rgb(240, 242, 240)' }}
+                                                                value={userData.gender}
+                                                                onChange={(e) => changeData(e)}>
+                                                                <option>النوع</option>
+                                                                <option value="female">انثي</option>
+                                                                <option value="male">رجل</option>
+
+                                                                {/* </select> */}
+                                                            </Form.Select>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div className="col-md-9 mb-4 pb-2" >
+                                                        <div >
+
+                                                            <input type="date" id="birthday" name='dob'
+                                                                value={userData.dob}
+                                                                onChange={(e) => changeData(e)}
+                                                                className='BirthDate-Input' />
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="d-flex justify-content-center" >
+                                                    <button type="button"
+                                                        className="d-grid"
+                                                        style={{ padding: '2%', fontSize: 'larger', maxHeight: '20rem' }}
+                                                        onClick={handleChange}
+                                                        disabled={errors.usernameErr || errors.display_nameErr || errors.phoneErr || errors.IDErr ||
+                                                            errors.passwordErr || errors.genderErr || errors.confirmErr}>
+
+                                                        انشاء حساب</button>
+                                                </div>
+
+                                            </form>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="col-md-6 col-lg-6 d-none d-md-block" >
+                                        <img src="https://i.ibb.co/sW957NL/signupback.jpg"
+                                            alt="login form" className="img-fluid" style={{ marginTop: '5%' }} />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* <section className="vh-150 bg-image"
                 style={{ backgroundImage: `url(${CheckenBg})` }}>
                 <div className="mask d-flex align-items-center h-100 gradient-custom-3">
                     <div className="container h-100">
@@ -337,7 +560,7 @@ function Signup() {
 
                                             </div> */}
 
-                                            <div className="row">
+            {/* <div className="row">
                                                 <div className="col-md-6 mb-4 pb-2">
 
                                                     <div className="form-outline">
@@ -419,7 +642,7 @@ function Signup() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
 
     );

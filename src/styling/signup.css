@@ -1,20 +1,44 @@
-.gradient-custom-3 {
-    /* fallback for old browsers */
-    background: #84fab0;
+.SignUp-Form{
+    margin-top: 4%;
+  }
+  .SignUp-Form input{
+    border-radius: 20px;
     
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-    }
-    .gradient-custom-4 {
-    /* fallback for old browsers */
-    background: #84fab0;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-    }
+    min-height:3rem;
+    border-style: none;
+    background-color: rgb(240, 242, 240);
+  }
+  .SignUp-Form .BirthDate-Input{
+    width:100%;
+    padding-left: 5%;
+    margin-left: 0%;
+  }
+  
+  
+  .SignUp-Form button{
+    background-color: #CF5814;
+    border-radius: 15px;
+    width: 35%;
+    color: white;
+    border-style: none;
+    min-height:3rem;
+  margin-right: 70%;
+  font-size: large;}
+  .SignUp-Img{
+    margin-top: 20%;
+    width:100%;
+  }
+  .changeImg{
+    /* position:absolute; */
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+    max-height: 24rem;
+  }
+  
+  .transparent{
+    opacity: 0;
+    display:none;
+  }
+  
