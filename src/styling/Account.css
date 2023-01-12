@@ -39,10 +39,6 @@ li {
   transition: all 1s ease;
 }
 
-.login-img {
-  width: 99%;
-  max-height: 95%;
-}
 
 .image-inactive {
   width: 100%;
@@ -71,25 +67,11 @@ li {
   background-color: #f8f8f8 !important;
 }
 
-.Login-Title {
-  color: #CF5814 !important;
-  display: inline-flex;
-  margin-left: 4%;
-  margin-bottom: 12%;
-  cursor: pointer;
-  text-decoration: none;
-}
 
-.Login-Title-noneActive {
-  color: #e1dedc;
-  display: inline;
-  margin-left: 5%;
-  margin-bottom: 12%;
-  cursor: pointer;
-}
+
 
 .login-Form {
-  margin-top: 0%;
+  margin-top: 20%;
 }
 
 .login-Form input {
@@ -109,8 +91,15 @@ li {
   border-style: none;
   min-height: 3rem;
   margin-right: 70%;
-  font-size: large;
+  font-size: larger;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
+.login-img {
+  width: 99%;
+  max-height: 95%;
+}
+
 
 .showPass {
   display: inline;

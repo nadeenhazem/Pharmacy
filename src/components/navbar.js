@@ -37,12 +37,12 @@ function NavbarBet() {
                                 </InputGroup>
                             </Form>
                             <Nav className="justify-content-end flex-grow-2 pe-3">
-                                <Nav.Link href="#action1" className='navbar-nav-link' 
-                                id='navbar-nav-link-id'> زبائن</Nav.Link>
-                                <Nav.Link href="#action2" className='navbar-nav-link'
-                                id='navbar-nav-link-id'>موردين</Nav.Link>
-                                <Nav.Link href="#action1" className='navbar-nav-link'
-                                id='navbar-nav-link-id'>تجار</Nav.Link>
+                                <Nav.Link href="#action1" id='navbar-nav-link' 
+                                > زبائن</Nav.Link>
+                                <Nav.Link href="#action2" id='navbar-nav-link'
+                                >موردين</Nav.Link>
+                                <Nav.Link href="#action1" id='navbar-nav-link'
+                                >تجار</Nav.Link>
                                 
                             </Nav>
 

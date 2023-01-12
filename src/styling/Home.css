@@ -24,21 +24,19 @@ background-color: rgb(237, 238, 239);
     top: 5px;
     padding-right: 5%;
   }
-  .navbar-nav-link{
+  #navbar-nav-link{
     margin-right:80px ;
-    font-size: large;
-    color:#CF5814;
-    padding-right:  60px;
+    font-size: larger ;
+    color:#CF5814 ;
+    padding-right:20px;
+    padding-left:20px;
   }
-  .navbar-nav-link:hover{
+  #navbar-nav-link:hover{
     color:white;
     background-color: #CF5814;
     border-radius: 10px;
   }
-  #navbar-nav-link-id{
-    padding-right:20px;
-    padding-left:20px;
-  }
+  
   .logo{
     width: 100px;
     height: 80px;
@@ -66,9 +64,9 @@ margin-top: -16px;
     color:#CF5814;
   }
   .Card-Home{
-    background-color: rgb(217, 217, 217,23%)  ;
-    border-style: none;
-    border-radius: 20px;
+    background-color: rgb(217, 217, 217,23%)  !important;
+    border-style: none !important;
+    border-radius: 20px !important;
     margin-top: 20px;
     min-height: 400px;
     
@@ -83,7 +81,7 @@ color:#CF5814;
   color:black
 }
 
-.daily-profits{
+#daily-profits{
   border-radius: 20px;
   color:#CF5814;
   background-color: rgb(217, 217, 217,23%)  ;
@@ -93,7 +91,7 @@ color:#CF5814;
 padding-top: 10px;
 font-size: large;
 }
-.daily-profits:hover{
+#daily-profits:hover{
   transform: scale(1.1);
 }
 .Header-title{
@@ -105,7 +103,7 @@ margin-top:70px;
   border-radius: 20px;
   cursor: pointer;
 }
-.All-Profits{
+#All-Profits{
   color:black;
  text-align: center ;
   padding-left: 10px; 

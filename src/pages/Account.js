@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import '../styling/Account.css'
 import Login from '../components/Login';
 import Signup from '../components/SignUp';
-
 function Account(props) {
     let namep = useParams();
     let nameOfParams = namep.name
@@ -43,7 +42,7 @@ function Account(props) {
                                         <img src="https://i.ibb.co/jG0744Z/loginback.png"
                                             alt=".." className={nameOfParams === 'login' ? 'image-active login-img' : 'image-inactive login-img'} />
                                         <img src="https://i.ibb.co/sW957NL/signupback.jpg"
-                                            alt="login form" className={nameOfParams === 'signup' ? 'image-active' : 'image-inactive'} style={{ marginTop: '5%' }} />
+                                            alt="login form" className={nameOfParams === 'signup' ? 'image-active ' : 'image-inactive '} style={{ marginTop: '15%' }} />
 
                                     </div>
                                 </div>

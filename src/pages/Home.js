@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import HomeTable from '../components/HomeTable';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchClient } from '../Redux/ClientSlice';
+import '../styling/Home.css'
 function Home() {
     const Client1=useSelector(state=>state.ClientData.data)
     const dispatch=useDispatch();
@@ -50,21 +51,21 @@ function Home() {
                             <h4 className='Header-title' style={{ marginTop: '40px' }}>  الارباح</h4>
                             <Row >
                                 <Col md={4} >
-                                    <Card className='daily-profits'>
+                                    <Card id='daily-profits'>
                                         <Card.Title style={{ textAlign: 'rigth', paddingRight: '10px' }}
                                         >الارباح اليوميه
                                         </Card.Title>
-                                        <Card.Title className='All-Profits'>
+                                        <Card.Title id='All-Profits'>
                                             مليون 1,000,000
                                         </Card.Title>
                                     </Card>
                                 </Col>
                                 <Col md={{ span: 4, offset: 4 }} >
-                                    <Card className='daily-profits'>
+                                    <Card id='daily-profits'>
                                         <Card.Title style={{ textAlign: 'rigth', paddingRight: '10px' }}
                                         >الارباح الشهريه
                                         </Card.Title>
-                                        <Card.Title className='All-Profits'>
+                                        <Card.Title id='All-Profits'>
                                             مليون 5,000,000
                                         </Card.Title>
                                     </Card>
