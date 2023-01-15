@@ -1,6 +1,5 @@
 import React from 'react';
 import {  Table } from 'react-bootstrap';
-import profile from '../Imgs/profile.png'
 function HomeTable(props) {
     return (
         <div>
@@ -19,27 +18,25 @@ function HomeTable(props) {
 
                                     </tr>
                                 </thead>
-                                <tbody> 
-                                {
-                                            props.Data.map((customer)=>
-                                    <tr key={customer.id}>
+                                <tbody > 
+                                {/* {
+                                            props.Data.map((customer)=> */}
+                                    <tr key={props.Data.id}>
                                     <td>
-                                        <img src={profile} alt='' className='img-profile'/>
+                                        <img src='https://hamdyadam.pythonanywhere.com/media/uploads/profile/ca5608be-089b-4e12-91b3-98244a990831/FB_IMG_1557850399243.jpg' alt='' className='img-profile'/>
                                         </td>
 
                                    
                                             
-                                            <td>{customer.id}</td>
-                                             <td>{customer.id}</td>
-                                            <td>{customer.title}</td>
+                                            <td id='HomeTable-td'>{props.Data.name}</td>
+                                             <td id='HomeTable-td'>{props.Data.national_id}</td>
+                                            <td id='HomeTable-td'>{props.Data.phone1}</td>
         
                                             
-                                            <td>{customer.id}</td>
-                                             <td>{customer.id}</td>
-                                            <td>{customer.title}</td>
+                                             <td id='HomeTable-td'>{props.Data.place}</td>
 
-                                         </tr>)   
-                                        }
+                                         </tr>
+                                         
                                    
 
                                 </tbody>

@@ -5,6 +5,9 @@ import axios from 'axios';
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 
 function Login() {
+  const[saveAccess,setSaveAccess]=useState([]);
+  localStorage.setItem('access',JSON.stringify(saveAccess))
+  // localStorage.setItem('UserData',JSON.stringify(saveAccess))
   const [loginUser, setLoginUser] = useState({
     email: '',
     password: '',
@@ -48,11 +51,16 @@ function Login() {
     axios.post('https://hamdyadam.pythonanywhere.com/login/', {
       email: loginUser.email,
       password: loginUser.password
+    },{
+      
     })
+    
+
       .then((res) => {
         console.log(res);
         window.location.href = `/`
         console.log(res.data);
+        setSaveAccess(saveAccess=>saveAccess=res.data.data)
       })
       .catch((err) => {
         console.log(err)
