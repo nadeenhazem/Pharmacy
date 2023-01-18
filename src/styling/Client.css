@@ -1,0 +1,26 @@
+.Client-Form {
+    margin-top: 10%;
+  }
+  
+  .Client-Form input {
+    border-radius: 20px;
+  
+    min-height: 3rem;
+    border-style: none;
+    background-color: rgb(240, 242, 240);
+  }
+  
+  
+  .Client-Form button {
+    background-color: #CF5814;
+    border-radius: 15px;
+    padding: 2%;
+    width: 40%;
+    color: white;
+    border-style: none;
+    min-height: 3rem;
+    max-height: 20rem;
+    margin-top: 5%;
+    margin-right: 70%;
+    font-size: larger;
+  }

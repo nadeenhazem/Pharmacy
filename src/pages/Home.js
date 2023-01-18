@@ -10,7 +10,6 @@ import '../styling/Home.css'
 function Home() {
     const Client1 = useSelector(state => state.ClientData.data.data);
     const [UserData,setUserData]=useState()
-
     const dispatch = useDispatch();
     useEffect(() => {
         const AccessData = JSON.parse(localStorage.getItem('access'));
@@ -46,7 +45,7 @@ console.log(UserData)
                                 </Card.Title>
                                 <hr />
                                 <Card.Title >
-                                    <Link to='#' className='Card-Title'>
+                                    <Link to='/Addclient' className='Card-Title'>
                                         أضافة عميل
     
                                     </Link>
